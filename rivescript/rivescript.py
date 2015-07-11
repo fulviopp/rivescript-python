@@ -1876,7 +1876,7 @@ the value is unset at the end of the `reply()` method)."""
         for array in arrays:
             rep = ''
             if array in self._arrays:
-                rep = r'\b(?:' + '|'.join(self._arrays[array]) + ')\b'
+                rep = "\b" + r'(?:' + '|'.join(self._arrays[array]) + ')' + "\b"
             regexp = re.sub(r'\@' + re.escape(array) + r'\b', rep, regexp)
 
         # Filter in bot variables.
